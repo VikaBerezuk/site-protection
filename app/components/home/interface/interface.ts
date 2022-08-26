@@ -1,6 +1,5 @@
-import {FC} from "react";
 
-export interface IHeaderLinks {
+export interface ILinks {
     name: string,
     link: string
 }
@@ -8,7 +7,7 @@ export interface IHeaderLinks {
 export interface IHeader {
     titleId: number,
     setTitleId: any,
-    links: IHeaderLinks[],
+    links: ILinks[],
     open: boolean
     setOpen: any
 }
@@ -16,5 +15,11 @@ export interface IHeader {
 export interface IServiceProduct {
     icon: string
     name: string,
+    description: string
+}
+
+export interface IServiceInformation {
+    img: string,
+    title: string,
     description: string
 }

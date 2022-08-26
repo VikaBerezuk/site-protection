@@ -1,23 +1,25 @@
-import React, {FC, useState} from 'react';
-import {servicesProduct} from "./servicesProduct";
+import React, {FC} from 'react';
+import {servicesInformation} from "./const/servicesInformation";
+import { BiChevronRight } from "react-icons/bi";
 
 const Services:FC = () => {
-    const [active, setActive] = useState<number | null>(null)
     return (
-        <section id='services' className='text-white py-20 max-w-screen-lg m-auto'>
-            <header className='flex justify-between'>
-                <h2 className='text-5xl relative
-                before:w-[60px] before:border-b-[#4d4c56] before:border-b-2 before:absolute before:top-7 before:-right-64
-                after:w-6/12 after:border-b-[#4d4c56] after:border-b-2 after:absolute  after:top-7 after:-right-44'>
-                    Наши Услуги</h2>
-                <a href='#' className='text-[#17DC95] underline-offset-8'>Полный Перечень Услуг</a>
-            </header>
-            <div className='text-center my-5 flex'>
-                { servicesProduct.map((el, i) => (
-                    <div className={`w-1/4 border-2 p-3 m-3 rounded-2xl py-8 px-4 flex flex-col ${active === i ? 'max-h-[100%] text-black bg-white': 'max-h-[245px]'}`} key={i} onClick={() => setActive(i)}>
-                        <img className={`${active === i ? 'fill-[#243c5a] bg-black' : ''}  m-auto`} src={el.icon} alt='icon'/>
-                        <p className='font-bold text-sm m-2'>{el.name}</p>
-                        {active === i ? <p className='text-xs'>{el.description}</p>: ''}
+        <section id='services' className='max-w-screen-lg m-auto'>
+            <h2 className='text-white text-5xl font-bold my-7 mx-7 md:mx-3 relative  md:-mt-20
+            after:absolute lg:after:-right-16 after:right-5 after:top-6 lg:after:w-1/3 md:after:w-1/5  after:border-t-[2px] after:border-t-[#4f555d]
+            before:absolute before:right-[35%] before:top-6 md:before:w-1/3 before:border-t-[2px] before:border-t-[#4f555d]
+            '>
+                Сервисы</h2>
+            <div className='flex flex-wrap md:flex-nowrap'>
+                {servicesInformation.map((el, i) => (
+                    <div key={i} className='md:w-1/3 sm:w-[44%] mx-7 sm:mx-auto md:mx-3 bg-white pb-10 rounded-3xl mt-10 md:mt-0 relative'>
+                        <img className='center/cover w-full' src={el.img} alt={el.img}/>
+                        <p className='px-7 mt-7 mb-2 text-base font-bold'>{el.title}</p>
+                        <div className='px-7 text-sm'>{el.description}</div>
+                        <div className='flex px-7 absolute bottom-4 right-0 items-center'>
+                            <a href='' className='underline'>Подробнее</a>
+                            <BiChevronRight />
+                        </div>
                     </div>
                 ))}
             </div>
