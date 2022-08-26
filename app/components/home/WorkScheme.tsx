@@ -8,7 +8,7 @@ const WorkScheme:FC = () => {
             <div
                 style={{opacity: visibleTitle ? 1 : 0, transitionDelay: visibleTitle ? '0.7s' : '0s'}}
                 className='md:w-1/2 md:border-r-2 md:border-r-[#4f555d] md:mr-5 relative mx-7 lg:ml-0 my-7 lg:my-0 md:pb-32'>
-                <div className='after:w-[55%] sm:after:w-[64%] after:top-12 md:after:right-20 after:right-12 after:absolute after:h-48
+                <div className='after:w-[55%] sm:after:w-[73%] md:after:w-[64%] after:top-12 md:after:right-20 after:right-12 after:absolute after:h-48
                  after:rounded-r-[40px] after:border-y-2 after:border-r-2 after:border-y-[#4f555d] after:border-r-[#4f555d]'>
                     <img src='/message.svg' alt='message'/>
                 </div>
@@ -18,11 +18,11 @@ const WorkScheme:FC = () => {
                 <div className='mt-24 relative z-10'>
                     <img src='/text.svg' alt='text'/>
                 </div>
-                <div className='relative after:w-[55%] sm:after:w-[64%] after:-top-14 md:after:left-12 after:left-14 after:absolute after:h-28
+                <div className='relative after:w-[55%] sm:after:w-[73%] md:after:w-[64%]  after:-top-14 md:after:left-12 after:left-14 after:absolute after:h-28
                  after:rounded-l-[40px] after:border-b-2 after:border-l-2 after:border-b-[#4f555d] after:border-l-[#4f555d] -z-1'>
                     <img src='/card.svg' alt='card' className='absolute md:right-9 right-0 z-10'/>
                 </div>
-                <div className='mt-24 relative after:w-[55%] sm:after:w-[64%] after:-top-16 md:after:right-20 after:right-12 after:absolute after:h-28
+                <div className='mt-24 relative after:w-[55%] sm:after:w-[73%] md:after:w-[64%]  after:-top-16 md:after:right-20 after:right-12 after:absolute after:h-28
                  after:rounded-r-[40px] after:border-b-2 after:border-r-2 after:border-b-[#4f555d] after:border-r-[#4f555d] -z-1'>
                     <img src='/analyst2.svg' alt='analyst'/>
                 </div>

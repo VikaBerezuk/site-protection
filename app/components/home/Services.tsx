@@ -2,7 +2,6 @@ import React, {FC} from 'react';
 import {servicesInformation} from "../const/servicesInformation";
 import { BiChevronRight } from "react-icons/bi";
 import {useOnScreen} from "../../hooks/useOnScreen";
-import CyberSecurity from "../../../pages/cyberSecurity";
 
 const Services:FC = () => {
     const [refTitle, visibleTitle] = useOnScreen({threshold: 0.5});

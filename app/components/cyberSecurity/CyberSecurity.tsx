@@ -10,7 +10,7 @@ const CyberSecurity = () => {
             <Header />
             <section className='text-white max-w-screen-lg m-auto'>
                <div className='flex md:mt-14 mt-7'>
-                   <Link href='/'><a className='cursor-pointer px-6 relative after:absolute  after:top-5
+                   <Link href='/'><a className='cursor-pointer px-6 relative after:absolute  after:top-3
                     after:right-[-6px] after:w-3 after:border-b-[3px] after:border-b-[#474c56]'>Главная</a></Link>
                    <div className='text-[#17DC95] px-6'>Полный Перечень Услуг</div>
                </div>
