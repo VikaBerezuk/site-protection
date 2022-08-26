@@ -18,7 +18,7 @@ export function useOnScreen(options:any) {
         return () => {
             if(observerRefValue) {
                 // @ts-ignore
-                observer.unobserve(observerRefValue);
+                //observer.unobserve(observerRefValue);
             }
         }
     }, [options, ref]);
