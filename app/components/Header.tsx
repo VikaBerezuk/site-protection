@@ -1,10 +1,11 @@
-import React, {FC} from 'react';
+import React, {FC, useState} from 'react';
 import {BiChevronDown} from "react-icons/bi";
-import {IHeader} from "./interface/interface";
 import { FiAlignJustify } from "react-icons/fi";
+import {LinksHeader} from "./const/Links";
 
-const Header:FC<IHeader> = ({titleId, setTitleId, links, open, setOpen}) => {
-
+const Header:FC = () => {
+    const [titleId, setTitleId] = useState<number>(0);
+    const [open,setOpen]=useState(false);
     return (
         <header className='border-b-[#4e5258] border-b-[3px]'>
             <nav className='max-w-screen-lg m-auto text-white'>
@@ -18,11 +19,11 @@ const Header:FC<IHeader> = ({titleId, setTitleId, links, open, setOpen}) => {
                     <ul className={`md:flex md:items-center md:pb-0 m-0 absolute md:static z-1 left-0 w-1/2
                      md:w-auto md:pl-0 transition-all duration-500 ease-in ${open ? 'top-12 bg-black':'top-[-490px]'}`}>
                         {
-                            links.map((link, i)=>(
+                            LinksHeader.map((link, i)=>(
                                 <li key={link.name} onClick={() => setTitleId(i)}
                                     className={`${titleId === i ? 'text-[#17DC95]': ''} cursor-pointer px-6 py-2 relative after:absolute  after:top-5 
                                     after:right-[-6px] after:w-3 after:border-b-[3px] after:border-b-[#474c56]`}>
-                                    <a href={link.link} className='duration-500'>{link.name}</a>
+                                    <a href={link.link}>{link.name}</a>
                                 </li>
                             ))
                         }

@@ -1,4 +1,4 @@
-import {IServiceInformation} from "../interface/interface";
+import {IServiceInformation} from "../interface/interfaceHome";
 
 export const servicesInformation:IServiceInformation[] = [
     {

@@ -1,4 +1,4 @@
-import {IServiceProduct} from "../interface/interface";
+import {IServiceProduct} from "../interface/interfaceHome";
 
 export const ourServicesProduct:IServiceProduct[] = [
     {

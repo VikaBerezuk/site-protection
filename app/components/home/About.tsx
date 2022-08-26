@@ -1,10 +1,7 @@
-import React, {FC, useState} from 'react';
-import Header from "./Header";
-import {LinksHeader} from "./const/Links";
+import React, {FC} from 'react';
+import Header from "../Header";
 
 const About:FC = () => {
-    const [titleId, setTitleId] = useState<number>(0);
-    const [open,setOpen]=useState(false);
     return (
         <section id='main' style={{
             background: `url('/computer.png') no-repeat center/cover`,
@@ -12,7 +9,7 @@ const About:FC = () => {
             minHeight: '600px',
             boxShadow: 'inset 0 -10px 30px 10px'
         }}>
-            <Header links={LinksHeader} titleId={titleId} setTitleId={setTitleId} open={open} setOpen={setOpen}/>
+            <Header />
             <section
                 className='text-white h-full md:pt-40 pt-20 text-center max-w-screen-lg m-auto lg:border-x-[2px] lg:border-x-[#4f555d]'>
                 <h1 className='lg:text-5xl text-3xl font-bold relative after:absolute after:-left-6 sm:after:top-6  after:top-14 after:w-16 after:border-t-[2px] after:border-t-[#4f555d]

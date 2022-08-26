@@ -1,7 +1,8 @@
 import React, {FC} from 'react';
-import {servicesInformation} from "./const/servicesInformation";
+import {servicesInformation} from "../const/servicesInformation";
 import { BiChevronRight } from "react-icons/bi";
 import {useOnScreen} from "../../hooks/useOnScreen";
+import CyberSecurity from "../../../pages/cyberSecurity";
 
 const Services:FC = () => {
     const [refTitle, visibleTitle] = useOnScreen({threshold: 0.5});
@@ -16,12 +17,13 @@ const Services:FC = () => {
             <div className='flex flex-wrap md:flex-nowrap'
                  style={{opacity: visibleTitle ? 1 : 0, transitionDelay: visibleTitle ? '1.5s' : '0s'}}>
                 {servicesInformation.map((el, i) => (
-                    <div key={i} className='md:w-1/3 sm:w-[44%] mx-7 sm:mx-auto md:mx-3 bg-white pb-10 rounded-3xl mt-10 md:mt-0 relative'>
+                    <div key={i} className='md:w-1/3 sm:w-[44%] mx-7 sm:mx-auto md:mx-3 bg-white pb-10 rounded-3xl mt-10
+                     hover:bg-[#17DC95] cursor-pointer md:mt-0 relative'>
                         <img className='center/cover w-full' src={el.img} alt={el.img}/>
                         <p className='px-7 mt-7 mb-2 text-base font-bold'>{el.title}</p>
                         <div className='px-7 text-sm'>{el.description}</div>
                         <div className='flex px-7 absolute bottom-4 right-0 items-center'>
-                            <a href='' className='underline'>Подробнее</a>
+                            <a href='cyberSecurity' className='underline'>Подробнее</a>
                             <BiChevronRight />
                         </div>
                     </div>

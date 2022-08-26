@@ -1,5 +1,5 @@
 import React, {FC, useState} from 'react';
-import {ourServicesProduct} from "./const/ourServicesProduct";
+import {ourServicesProduct} from "../const/ourServicesProduct";
 import {useOnScreen} from "../../hooks/useOnScreen";
 
 const OurServices:FC = () => {
