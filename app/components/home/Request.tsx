@@ -1,12 +1,15 @@
 import React, {FC, useState} from 'react';
+import {useOnScreen} from "../../hooks/useOnScreen";
 
 const Request:FC = () => {
+    const [refTitle, visibleTitle] = useOnScreen({threshold: 0.5});
     const [value, setValue] = useState<string>('');
     const handlerInput:React.ChangeEventHandler<HTMLInputElement> = (e) => {
         setValue(e.target.value);
     }
     return (
-        <section className='text-white max-w-screen-lg m-auto mt-9 text-center'>
+        <section className='text-white max-w-screen-lg m-auto mt-9 text-center' ref={refTitle}
+                 style={{opacity: visibleTitle ? 1 : 0, transitionDelay: visibleTitle ? '0.7s' : '0s'}}>
             <h2 className='text-5xl font-bold my-7 relative after:absolute after:-left-16 after:top-6 after:w-1/3 after:border-t-[2px] after:border-t-[#4f555d]'>
                 Оставить Запрос</h2>
             <p className='md:w-1/2 w-4/5 m-auto my-4 text-sm relative px-5
@@ -19,7 +22,7 @@ const Request:FC = () => {
                 <input type='email' value={value} onChange={(e) => handlerInput(e) } placeholder='Enter your email'
                 className='rounded-lg px-3 py-1 text-black'/>
             </div>
-            <button className='border-[2px] w-28 py-4 зн_4 mt-5 mb-10 text-center rounded-xl bg-[rgba(0,0,0,0.4)]'>
+            <button className='border-[2px] w-28 py-4 зн_4 mt-5 mb-10 text-center rounded-xl bg-[rgba(0,0,0,0.4)] hover:bg-white hover:text-[#17DC95]'>
                 Отправить Запрос
             </button>
         </section>
