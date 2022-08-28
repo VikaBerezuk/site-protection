@@ -12,7 +12,7 @@ const Home: FC = () => {
     useEffect(() => {
         setTimeout(() => {
             setIsLoading(false);
-        }, 1500)
+        }, 1850)
     })
     return (
         <section className='bg-black'>
