@@ -13,7 +13,8 @@ const Footer:FC = () => {
                         {
                             LinksFooter.map((link)=>(
                                 <li key={link.name}
-                                    className={'cursor-pointer px-6 py-2 relative after:absolute  after:top-5 after:left-[-6px] after:w-3 after:border-b-[3px] after:border-b-[#474c56]'}>
+                                    className={'cursor-pointer px-6 py-2 relative after:absolute  after:top-5 after:left-[-6px]' +
+                                        ' after:w-3 after:border-b-[3px] after:border-b-[#474c56] hover:text-white'}>
                                     <a href={link.link} className='duration-500'>{link.name}</a>
                                 </li>
                             ))

@@ -15,14 +15,14 @@ const Services:FC = () => {
                 Сервисы</h2>
             <div className='flex flex-wrap md:flex-nowrap'
                  style={{opacity: visibleTitle ? 1 : 0, transitionDelay: visibleTitle ? '0.7s' : '0s'}}>
-                {servicesInformation.map((el, i) => (
-                    <div key={i} className='md:w-1/3 sm:w-[44%] mx-7 sm:mx-auto md:mx-3 bg-white pb-10 rounded-3xl mt-10
-                     hover:bg-[#17DC95] cursor-pointer md:mt-0 relative'>
-                        <img className='center/cover w-full' src={el.img} alt={el.img}/>
+                {servicesInformation.map((el) => (
+                    <div key={el.title} className='md:w-1/3 sm:w-[44%] mx-7 sm:mx-auto md:mx-3 bg-white pb-10 rounded-3xl mt-10
+                     hover:bg-[#17DC95] md:mt-0 relative'>
+                        <img className='center/cover w-full' src={el.img} alt={el.title}/>
                         <p className='px-7 mt-7 mb-2 text-base font-bold'>{el.title}</p>
                         <div className='px-7 text-sm'>{el.description}</div>
                         <div className='flex px-7 absolute bottom-4 right-0 items-center'>
-                            <a href='cyberSecurity' className='underline'>Подробнее</a>
+                            <a href='cyberSecurity' className='underline hover:text-white cursor-pointer '>Подробнее</a>
                             <BiChevronRight />
                         </div>
                     </div>
