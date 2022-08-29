@@ -9,7 +9,7 @@ const Request:FC = () => {
     }
     return (
         <section className='text-white max-w-screen-lg m-auto mt-9 text-center' ref={refTitle}
-                 style={{opacity: visibleTitle ? 1 : 0, transitionDelay: visibleTitle ? '0.3s' : '0s'}}>
+                 style={{opacity: visibleTitle ? 1 : 0, transitionDuration: visibleTitle ? '0.3s' : '0', transitionDelay: visibleTitle ? '0.3s' : '0s'}}>
             <h2 className='text-5xl font-bold my-7 relative after:absolute after:-left-16 after:top-6 after:w-1/3 after:border-t-[2px] after:border-t-[#4f555d]'>
                 Оставить Запрос</h2>
             <p className='md:w-1/2 w-4/5 m-auto my-4 text-sm relative px-5
