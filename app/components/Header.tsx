@@ -21,7 +21,7 @@ const Header:FC = () => {
                      md:w-auto md:pl-0 transition-all duration-500 ease-in ${open ? 'top-12 bg-black':'top-[-490px]'}`}>
                         {
                             LinksHeader.map((link, i)=>(
-                                <li key={link.name} onClick={() => setTitleId(i)}
+                                <li key={link.name} onClick={() => {setTitleId(i); setOpen(false)}}
                                     className={`${titleId === i ? 'text-[#17DC95]': ''} cursor-pointer px-6 py-2 relative md:after:absolute  after:top-5 
                                     after:right-[-6px] after:w-3 after:border-b-[3px] after:border-b-[#474c56] hover:text-[#17DC95]
                                 `}>
